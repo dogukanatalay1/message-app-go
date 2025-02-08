@@ -22,7 +22,6 @@ func ConnectDB() {
 	config.MaxConns = 10
 	config.MinConns = 1
 
-	// Create a connection pool
 	dbpool, err := pgxpool.NewWithConfig(context.Background(), config)
 	if err != nil {
 		log.Fatalf("Unable to create database connection pool: %v", err)
